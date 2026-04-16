@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@OpenAPIDefinition(servers = @Server(url = "https://e-commerce-project-production-6c4e.up.railway.app"))
+@OpenAPIDefinition(servers = {@Server(url = "https://e-commerce-project-production-6c4e.up.railway.app")})
 public class ECommerceApplication {
 
     public static void main(String[] args) {
