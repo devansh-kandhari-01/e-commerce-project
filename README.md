@@ -7,6 +7,15 @@ The idea behind this project was not just to make APIs work, but to structure th
 
 ---
 
+## Live Demo
+
+- Base URL: https://e-commerce-project-production-6c4e.up.railway.app  
+  _(Root endpoint is not mapped. Use `/products` or Swagger UI to test APIs.)_
+
+- Example Endpoint:  
+  https://e-commerce-project-production-6c4e.up.railway.app/products
+---
+
 ## What this project does
 
 * Create, update, delete, and fetch products
@@ -174,7 +183,7 @@ This is closer to how real APIs behave.
 You can test all APIs from your browser:
 
 ```
-http://localhost:8080/swagger-ui.html
+https://e-commerce-project-production-6c4e.up.railway.app/swagger-ui/index.html
 ```
 
 No need for Postman — everything is interactive.
@@ -186,11 +195,20 @@ No need for Postman — everything is interactive.
 Database credentials are not hardcoded:
 
 ```properties
+spring.datasource.url=${DB_URL}
 spring.datasource.username=${DB_USERNAME}
 spring.datasource.password=${DB_PASSWORD}
 ```
 
 This makes the project safer and closer to production practices.
+
+---
+
+## Deployment
+
+* Deployed on Railway
+* Uses environment variables for database configuration
+* Supports dynamic port configuration for cloud environments (`server.port=${PORT:8080}`)
 
 ---
 
